@@ -1,9 +1,17 @@
+import { useState } from 'react';
 import Header from './Header';
+import Counter from './Counter';
+import Buttons from './Buttons';
 
-function App() {
+export default function App() {
+  // This will initialize with what we have in the db
+  const [total, setTotal] = useState(0);
+  
   return (
-  <Header />
+    <>
+      <Header />
+      <Counter total={total}/>
+      <Buttons setTotal={setTotal}/>
+    </>
   );
 }
-
-export default App;

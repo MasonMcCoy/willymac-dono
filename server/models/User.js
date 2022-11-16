@@ -1,4 +1,4 @@
-// import { uuid } from 'uuidv4';
+const uuid = require('uuid');
 
 module.exports = (sequelize, DataTypes) => {
     const Users = sequelize.define("Users", {
@@ -8,9 +8,9 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
 
-    // Users.beforeCreate(async (user) => {
-    //     return user.id = uuid();
-    // })
+    Users.beforeCreate(async (user) => {
+        return user.id = uuid();
+    })
 
     return Users;
 }

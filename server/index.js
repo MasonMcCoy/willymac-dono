@@ -3,6 +3,10 @@ const app = express();
 
 const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, () => {
-    console.log(`Server is running on ${PORT}`);
+const db = require('./models');
+
+db.sequelize.sync().then(() => {
+    app.listen(PORT, () => {
+        console.log(`Server is running on ${PORT}`);
+    })
 })

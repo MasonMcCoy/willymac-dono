@@ -10,7 +10,7 @@ export default function Buttons({ setTotal }) {
         })
 
         try {
-            const docRef = await addDoc(collection(db, "users"), {
+            await addDoc(collection(db, "users"), {
               donation: bttnVal,    
             });
           } catch (err) {

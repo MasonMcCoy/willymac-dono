@@ -1,2 +1,2 @@
 # willymac-dono
-Mock donation site for content creator Willymacshow
+Mock donation site for YouTube content creator Willymacshow

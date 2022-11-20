@@ -3,7 +3,9 @@ import React from 'react'
 export default function Counter({ total }) {
   return (
     <div>
-      ${total} Donated!
+      Total Donated:
+      <br></br>
+      ${total.toLocaleString()}
     </div>
   )
 }

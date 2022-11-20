@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
+import './styles.css';
 import Header from './Header';
 import Counter from './Counter';
 import Buttons from './Buttons';
 
 import { collection, query, getDocs } from "firebase/firestore";
 import { db } from './firebase';
+import Socials from './Socials';
 
 export default function App() {
   // This will initialize with what we have in the db
@@ -17,7 +19,6 @@ export default function App() {
     let donoTotal = 0;
 
     querySnapshot.forEach((doc) => {
-      console.log(doc.data().donation);
       donoTotal += doc.data().donation;
     })
       
@@ -33,6 +34,7 @@ export default function App() {
       <Header />
       <Counter total={total}/>
       <Buttons setTotal={setTotal}/>
+      <Socials />
     </>
   );
 }

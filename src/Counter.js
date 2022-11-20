@@ -2,10 +2,13 @@ import React from 'react'
 
 export default function Counter({ total }) {
   return (
-    <div>
+    <>
+    <div id="donation-label">
       Total Donated:
-      <br></br>
+    </div>
+    <div id="donation-value">
       ${total.toLocaleString()}
     </div>
+    </>
   )
 }

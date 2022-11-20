@@ -1,6 +1,6 @@
 import React from 'react'
 import { collection, addDoc } from "firebase/firestore";
-import {db} from './firebase';
+import { db } from './firebase';
 
 export default function Buttons({ setTotal }) {
 
@@ -19,12 +19,12 @@ export default function Buttons({ setTotal }) {
     }
 
     return (
-        <>
-        <button onClick={() => handleDonateClick(5)}>$5</button>
-        <button onClick={() => handleDonateClick(10)}>$10</button>
-        <button onClick={() => handleDonateClick(100)}>$100</button>
-        <button onClick={() => handleDonateClick(1000)}>$1,000</button>
-        <button onClick={() => handleDonateClick(10000)}>$10,000</button>
-        </>
+        <div id="buttons">
+          <button onClick={() => handleDonateClick(5)}>$5</button>
+          <button onClick={() => handleDonateClick(10)}>$10</button>
+          <button onClick={() => handleDonateClick(100)}>$100</button>
+          <button onClick={() => handleDonateClick(1000)}>$1,000</button>
+          <button onClick={() => handleDonateClick(10000)}>$10,000</button>
+        </div>
     )
 }

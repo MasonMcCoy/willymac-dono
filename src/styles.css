@@ -8,6 +8,16 @@ button {
     font-size: 45px;
 }
 
+#donate-copy {
+    text-align: center;
+    font-size: 20px;
+}
+
+#donate-container {
+    display: flex;
+    justify-content: center;
+}
+
 #donation-label {
     text-align: center;
     font-size: 20px;

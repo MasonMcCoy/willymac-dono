@@ -1,17 +1,23 @@
 import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles.css';
-import Header from './Header';
-import Counter from './Counter';
-import Buttons from './Buttons';
+
+import Landing from './pages/Landing';
+import Donate from './pages/Donate';
+
+import Header from './components/Header';
+import Counter from './components/Counter';
+import Socials from './components/Socials';
 
 import { collection, query, getDocs } from "firebase/firestore";
 import { db } from './firebase';
-import Socials from './Socials';
 
 export default function App() {
-  // This will initialize with what we have in the db
+  // Sets total to 0, and calls for it to update after fetchTotal executes
+  // TO-DO: Include some kind of loading component to allow for fetchTotal to run
   const [total, setTotal] = useState(0);
   
+  // Queries firestore for user donations and sums them
   const fetchTotal = async () => {
 
     const q = query(collection(db, "users"));
@@ -25,16 +31,22 @@ export default function App() {
     setTotal(donoTotal);   
   }
 
+  // Calls fetchTotal on page load
   useEffect(() => {
     fetchTotal();
   }, []);
 
   return (
-    <>
-      <Header />
-      <Counter total={total}/>
-      <Buttons setTotal={setTotal}/>
-      <Socials />
-    </>
+    <Router>
+      <>
+        <Header />
+        <Counter total={total}/>
+          <Routes>
+            <Route path='/' element={<Landing />}/>
+            <Route path="/donate" element={<Donate setTotal={setTotal} />} />
+          </Routes>
+        <Socials />
+      </>
+    </Router>
   );
 }

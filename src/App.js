@@ -4,6 +4,7 @@ import './styles.css';
 
 import Landing from './pages/Landing';
 import Donate from './pages/Donate';
+import Success from './pages/Success';
 
 import Header from './components/Header';
 import Counter from './components/Counter';
@@ -44,6 +45,7 @@ export default function App() {
           <Routes>
             <Route path='/' element={<Landing />}/>
             <Route path="/donate" element={<Donate setTotal={setTotal} />} />
+            <Route path="/success" element={<Success />} />
           </Routes>
         <Socials />
       </>

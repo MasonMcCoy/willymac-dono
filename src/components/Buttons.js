@@ -1,8 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+
 import { collection, addDoc } from "firebase/firestore";
 import { db } from '../firebase';
 
 export default function Buttons({ setTotal }) {
+    const navigate = useNavigate();
 
     const handleDonateClick = async (bttnVal) => {
         setTotal(prevTotal => {
@@ -16,6 +19,8 @@ export default function Buttons({ setTotal }) {
           } catch (err) {
             console.error("Error adding document: ", err);
           }
+
+        navigate('/success');
     }
 
     return (

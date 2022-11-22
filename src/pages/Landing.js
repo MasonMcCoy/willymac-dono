@@ -9,10 +9,10 @@ export default function Landing() {
 
     return (
         <>
-            <p id="donate-copy">
+            <p class="donate-copy">
                 Help your good pal WillyMac raise some money for completely reasonable endeavors. This is all fake btw.
             </p>
-            <div id="carousel-container">
+            <div id="content-container">
                 <ImageCarousel />
             </div>
             <div id="donate-container">

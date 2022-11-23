@@ -27,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+    height: 100vh;
     background-color: #256fb6;
 }
 
@@ -65,7 +66,7 @@ button {
 #donation-label {
     text-align: center;
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 #donation-value {
@@ -78,6 +79,7 @@ button {
 .donate-copy {
     text-align: center;
     font-size: 20px;
+    margin: 25px 0
 }
 
 /* Resizes the carousel windows to fit images */
@@ -103,6 +105,28 @@ button {
     opacity: 1;
   }
 /* End fix */
+
+.carousel {
+    border: 5px solid #256fb6;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
+.carousel-caption {
+    max-width: 100%;
+    width:100%;
+    left: 0;
+    padding-bottom: 0;
+}
+
+.caro-text {
+    font-size: 2rem;
+    color: black;
+    background-color: #bac5d6;
+    padding: 5px 0;
+}
 
 #buttons {
     display: flex;

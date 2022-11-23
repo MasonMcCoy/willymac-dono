@@ -10,7 +10,7 @@ export default function Landing() {
     return (
         <>
             <p class="donate-copy">
-                Help your good pal WillyMac raise some money for completely reasonable endeavors. This is all fake btw.
+                Help your good pal WillyMac raise some money for completely reasonable endeavors. Totally a very real thing lol.
             </p>
             <div id="content-container">
                 <ImageCarousel />

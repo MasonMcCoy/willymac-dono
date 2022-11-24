@@ -10,7 +10,7 @@ export default function ImageCarousel() {
     <Carousel>
       <Carousel.Item interval={10000}>
         <img
-          className='d-block w-100 caro-background'
+          className='d-block w-100 caro-background willy-img'
           src={yacht}
           alt='Second slide'
         />
@@ -21,7 +21,7 @@ export default function ImageCarousel() {
       </Carousel.Item>
       <Carousel.Item interval={10000}>
         <img
-          className='d-block w-100 caro-background'
+          className='d-block w-100 caro-background willy-img'
           src={ski}
           alt='Third slide'
         />
@@ -32,7 +32,7 @@ export default function ImageCarousel() {
       </Carousel.Item>
       <Carousel.Item interval={10000}>
         <img
-          className='d-block w-100 caro-background'
+          className='d-block w-100 caro-background willy-img'
           src={jet}
           alt='First slide'
         />

@@ -28,26 +28,32 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
     height: 100vh;
+    margin-bottom:50px;
     background-color: #256fb6;
 }
 
 #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100vh;
     margin: 0 18%;
-    padding-top: 15px;
+    padding: 15px 10px 0 10px;
     background-color: #f5f4f5;
 }
 
 
 button {
     margin: 5px;
-    width: 20%;
+    width: auto;
 }
 
 #header {
+    /* display: flex;
+    flex-wrap: wrap; */
     text-align: center;
     font-family: 'Azeret Mono', monospace;
-    font-size: 45px;
+    font-size: 1.25rem;
     background-color: #bac5d6;
 }
 
@@ -82,11 +88,15 @@ button {
     margin: 25px 0
 }
 
+.carousel {
+    display: flex;
+    border: 5px solid #256fb6;
+}
+
 /* Resizes the carousel windows to fit images */
 /* TO-DO: Media queries */
 .carousel-item {
-    height: 533px !important;
-    width: 800px !important;
+    display: flex;
 }
 
 /* Fix I found online for the jankiness of the sliding images */
@@ -106,23 +116,20 @@ button {
   }
 /* End fix */
 
-.carousel {
-    border: 5px solid #256fb6;
-}
-
 .carousel-indicators {
     display: none;
 }
 
 .carousel-caption {
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
     width:100%;
     left: 0;
     padding-bottom: 0;
 }
 
 .caro-text {
-    font-size: 2rem;
+    font-size: 1rem;
     color: black;
     background-color: #bac5d6;
     padding: 5px 0;
@@ -130,6 +137,8 @@ button {
 
 #buttons {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 0 25% 0 25%;
 }
 
@@ -155,11 +164,13 @@ button {
 #social-container {
     display: flex;
     justify-content: center;
-    position:absolute;
+    position: fixed;
     left:0;
     bottom:0;
     right:0;
+    height: 50px;
     background-color: #bac5d6;
+    margin-bottom: 0px;
 }
 
 .socials {

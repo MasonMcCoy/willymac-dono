@@ -13,12 +13,15 @@ export default function Buttons({ setTotal }) {
         })
 
         try {
-            await addDoc(collection(db, "users"), {
-              donation: bttnVal,    
-            });
-          } catch (err) {
-            console.error("Error adding document: ", err);
-          }
+          await addDoc(collection(db, "users"), {
+            donation: bttnVal,    
+          });
+        }
+        catch (err) {
+          console.error("Error adding document: ", err);
+        }
+
+        localStorage.setItem("donation", bttnVal)
 
         navigate('/success');
     }

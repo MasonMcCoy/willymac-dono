@@ -189,6 +189,12 @@ button {
     margin-top: 50px;
 }
 
+#twitter-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 #thanks-bttn-container {
     display: flex;
     justify-content: center;
@@ -201,6 +207,11 @@ button {
     font-family: 'Chirp', sans-serif;
     font-size: 1.5rem;
 
+}
+
+#sponsor-link {
+    text-align: center;
+    margin-top: 10px;
 }
 
 #social-container {
@@ -249,5 +260,9 @@ button {
 
     #buttons {
         margin: 0;
+    }
+
+    .thanks-copy {
+        margin-top: 10px;
     }
 }

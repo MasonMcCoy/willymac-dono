@@ -86,6 +86,13 @@ button {
     margin: 5px 0;
 }
 
+#final-value {
+    text-align: center;
+    font-size: 2rem;
+    color: goldenrod;
+    margin: 5px 0;
+}
+
 .donate-copy {
     text-align: center;
     font-size: 1.25rem;

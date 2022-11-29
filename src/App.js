@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles.css';
 
 import Landing from './pages/Landing';
+import AltLanding from './pages/AltLanding';
 import Donate from './pages/Donate';
 import Success from './pages/Success';
 
 import Header from './components/Header';
 import Counter from './components/Counter';
+import FinalCounter from './components/FinalCounter';
 import Socials from './components/Socials';
 
 import { collection, query, getDocs } from "firebase/firestore";
@@ -41,9 +43,11 @@ export default function App() {
     <Router>
       <>
         <Header />
-        <Counter total={total}/>
+        {/* <Counter total={total}/> */}
+        <FinalCounter />
           <Routes>
-            <Route path='/' element={<Landing />}/>
+            {/* <Route path='/' element={<Landing />}/> */}
+            <Route path='/' element={<AltLanding />}/>
             <Route path="/donate" element={<Donate setTotal={setTotal} />} />
             <Route path="/success" element={<Success />} />
           </Routes>
